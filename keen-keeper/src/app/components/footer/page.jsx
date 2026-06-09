@@ -1,4 +1,5 @@
-import { CircleFadingPlus } from "lucide-react";
+
+import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
@@ -10,9 +11,9 @@ const Footer = () => {
             <p>Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.</p>
             <p>Social Links</p>
             <ul className="flex gap-3">
-            <Link href={''}><CircleFadingPlus/></Link>
-            <Link href={''}><CircleFadingPlus/></Link>
-            <Link href={''}><CircleFadingPlus/></Link>
+            <Link href={''}><Image src={`/isnta.jpg`} alt="img" width={25} height={25}></Image></Link>
+            <Link href={''}><Image src={`/fb.png`} alt="img" width={25} height={25}></Image></Link>
+            <Link href={''}><Image src={`/x.png`} alt="img" width={25} height={25}></Image></Link>
             </ul>
     <p className="border-t-4">© 2026 KeenKeeper. All rights reserved.</p>
          </div>
