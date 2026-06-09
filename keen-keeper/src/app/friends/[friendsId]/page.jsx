@@ -1,5 +1,8 @@
+"use client";
 import { Archive, Bell, Camera, Link, MessageCircle, PhoneCall, Trash } from "lucide-react";
 import Image from "next/image";
+import { useTimeline } from "@/app/context/TimelineContext";
+import { useParams } from "next/navigation";
 
 const friends = [
   {
@@ -124,14 +127,20 @@ const friends = [
   }
 ]
 
-const FriendsId = async({params}) => {
+const FriendsId = ({params}) => {
 
-    const res = await params;
-    const {friendsId} = res;
+
+    const {friendsId} = useParams();
     // console.log(friendsId)
 
     const expectedFriend = friends.find((friend)=>friend.id === parseInt(friendsId))
 // console.log(expectedFriend)
+
+const { addActivity } = useTimeline();
+
+const showAlert = () =>{
+  console.log("button is clicked.")
+}
     return (
 
     <div className="min-h-screen p-4">
@@ -265,20 +274,35 @@ const FriendsId = async({params}) => {
 
             <div className="grid grid-cols-3 gap-4">
               
-              <button className="border rounded-md py-8 flex flex-col items-center justify-center ">
-                <span className="text-2xl mb-2"><PhoneCall/></span>
-                <span>Call</span>
-              </button>
+<button
+  onClick={() => addActivity(expectedFriend, "call")}
+  className="border rounded-md py-8 flex flex-col items-center justify-center cursor-pointer hover:bg-base-300"
+>
+  <span className="text-2xl mb-2">
+    <PhoneCall />
+  </span>
+  <span>Call</span>
+</button>
 
-              <button className="border rounded-md py-8 flex flex-col items-center justify-center ">
-                <span className="text-2xl mb-2"><MessageCircle/></span>
-                <span>Text</span>
-              </button>
+<button
+  onClick={() => addActivity(expectedFriend, "text")}
+  className="border rounded-md py-8 flex flex-col items-center justify-center cursor-pointer hover:bg-base-300"
+>
+  <span className="text-2xl mb-2">
+    <MessageCircle />
+  </span>
+  <span>Text</span>
+</button>
 
-              <button className="border rounded-md py-8 flex flex-col items-center justify-center ">
-                <span className="text-2xl mb-2"><Camera/></span>
-                <span>Video</span>
-              </button>
+<button
+  onClick={() => addActivity(expectedFriend, "video")}
+  className="border rounded-md py-8 flex flex-col items-center justify-center cursor-pointer hover:bg-base-300"
+>
+  <span className="text-2xl mb-2">
+    <Camera />
+  </span>
+  <span>Video</span>
+</button>
 
             </div>
           </div>
