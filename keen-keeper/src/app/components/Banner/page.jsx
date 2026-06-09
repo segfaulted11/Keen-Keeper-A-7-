@@ -3,7 +3,7 @@ import { Plus } from "lucide-react";
 const Banner = () => {
   return (
     <div className="container mx-auto flex flex-col gap-5 mb-10">
-      <div className="flex flex-col justify-center items-center h-65 gap-3 bg-red-400">
+      <div className="flex flex-col justify-center items-center h-65 gap-3 bg-purple-200">
         <h1 className="text-5xl font-bold">
           Friends to keep close in your life
         </h1>
@@ -16,22 +16,22 @@ const Banner = () => {
         </button>
       </div>
       <div className="grid grid-cols-4 gap-5">
-        <div className="shadow-card rounded-xl text-center py-8 bg-blue-950">
+        <div className="shadow-card rounded-xl text-center py-8 bg-purple-200">
           10
           <br />
           Total Friends
         </div>
-        <div className="shadow-card rounded-xl text-center py-8 bg-blue-950">
+        <div className="shadow-card rounded-xl text-center py-8 bg-purple-200">
           10
           <br />
           On Track
         </div>
-        <div className="shadow-card rounded-xl text-center py-8 bg-blue-950">
+        <div className="shadow-card rounded-xl text-center py-8 bg-purple-200">
           10
           <br />
        Need Attention
         </div>
-        <div className="shadow-card rounded-xl text-center py-8 bg-blue-950">
+        <div className="shadow-card rounded-xl text-center py-8 bg-purple-200">
           10
           <br />
           Interactions This Month

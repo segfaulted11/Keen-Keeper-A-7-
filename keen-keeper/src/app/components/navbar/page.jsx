@@ -21,8 +21,8 @@ const Navbar = () => {
             <button className={`btn mr-4 ${pathName==="/timeline"?"btn-primary":""}`}>
                <Clock/> Timeline</button>
           </Link>
-          <Link href={``}>
-            <button className="btn btn-soft">
+          <Link href={`/stats`}>
+            <button className={`btn mr-4 ${pathName==="/stats"?"btn-primary":""}`}>
               <ChartLine/> Stats</button>
           </Link>
         </ul>
