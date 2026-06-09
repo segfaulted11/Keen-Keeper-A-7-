@@ -147,29 +147,23 @@ const FriendsId = ({ params }) => {
 
   const { addActivity } = useTimeline();
 
-const handleCall = () => {
-  addActivity(expectedFriend, "call");
+  const handleCall = () => {
+    addActivity(expectedFriend, "call");
 
-  toast.success(
-    `Call with ${expectedFriend.name}!`
-  );
-};
+    toast.success(`Call with ${expectedFriend.name}!`);
+  };
 
-const handleText = () => {
-  addActivity(expectedFriend, "text");
+  const handleText = () => {
+    addActivity(expectedFriend, "text");
 
-  toast.success(
-    `Text with ${expectedFriend.name}!`
-  );
-};
+    toast.success(`Text with ${expectedFriend.name}!`);
+  };
 
-const handleVideo = () => {
-  addActivity(expectedFriend, "video");
+  const handleVideo = () => {
+    addActivity(expectedFriend, "video");
 
-  toast.success(
-    `Video call with ${expectedFriend.name}!`
-  );
-};
+    toast.success(`Video call with ${expectedFriend.name}!`);
+  };
   return (
     <div className="min-h-screen p-4">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
@@ -294,7 +288,7 @@ const handleVideo = () => {
               </button>
 
               <button
-               onClick={handleText}
+                onClick={handleText}
                 className="border rounded-md py-8 flex flex-col items-center justify-center cursor-pointer hover:bg-base-300"
               >
                 <span className="text-2xl mb-2">
@@ -304,7 +298,7 @@ const handleVideo = () => {
               </button>
 
               <button
-               onClick={handleVideo}
+                onClick={handleVideo}
                 className="border rounded-md py-8 flex flex-col items-center justify-center cursor-pointer hover:bg-base-300"
               >
                 <span className="text-2xl mb-2">
